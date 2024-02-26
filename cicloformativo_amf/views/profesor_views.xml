@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id='cf_action4' model='ir.actions.act_window'>
+            <field name="name">Profesores</field>
+            <!-- Indicamos a que modelo aplica -->
+            <field name="res_model">cicloformativo_amf.profesor</field>
+        </record>
+
+        <menuitem name="List Profesores" id="lista_profesor_1" parent="ciclos_cf_menu_2" action="cf_action4" />
+
+        <!-- Define la vista de formulario para Profesor -->
+        <record model="ir.ui.view" id="view_profesor_tree">
+            <field name="name">profesor.tree</field>
+            <field name="model">cicloformativo_amf.profesor</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombreprof"/>
+                    <field name="modulo_ids"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

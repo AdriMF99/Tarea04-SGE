@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id='cf_action3' model='ir.actions.act_window'>
+            <field name="name">Módulos</field>
+            <!-- Indicamos a que modelo aplica -->
+            <field name="res_model">cicloformativo_amf.modulo</field>
+        </record>
+
+        <menuitem name="List Módulos" id="lista_modulos_1" parent="ciclos_cf_menu" action="cf_action3" />
+
+        <!-- Define la vista de formulario para Módulo -->
+        <record model="ir.ui.view" id="view_modulo_tree">
+            <field name="name">modulo.tree</field>
+            <field name="model">cicloformativo_amf.modulo</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombremod"/>
+                    <field name="ciclo_id"/>
+                    <field name="alumno_ids"/>
+                    <field name="profesor_id"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

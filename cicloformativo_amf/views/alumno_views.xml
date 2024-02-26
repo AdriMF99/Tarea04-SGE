@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id='cf_action2' model='ir.actions.act_window'>
+            <field name="name">Alumnos</field>
+            <!-- Indicamos a que modelo aplica -->
+            <field name="res_model">cicloformativo_amf.alumno</field>
+        </record>
+
+        <menuitem name="Menu Personas" id="ciclos_cf_menu_2" parent="cf_menu" action="cf_action"/>
+        <menuitem name="List Alumnos" id="lista_alumno_1" parent="ciclos_cf_menu_2" action="cf_action2" />
+
+        <!-- Define la vista de formulario para Alumno -->
+        <record model="ir.ui.view" id="view_alumno_tree">
+            <field name="name">alumno.tree</field>
+            <field name="model">cicloformativo_amf.alumno</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre"/>
+                    <field name="modulo_ids"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>
